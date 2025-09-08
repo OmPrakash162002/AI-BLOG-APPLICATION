@@ -59,11 +59,9 @@ const Comments = () => {
               <th scope="col" className="px-6 py-3 max-sm:hidden">
                 Action
               </th>
-              <tr>
                 <th scope="col" className="px-6 py-3">
                   Date
                 </th>
-              </tr>
             </tr>
           </thead>
           <tbody>
