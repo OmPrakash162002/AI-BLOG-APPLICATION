@@ -117,9 +117,9 @@ const Blog = () => {
           {/* Add Comment */}
           <div>
             <h3 className='font-bold text-xl'>Add your comment</h3>
-            <form onClick={addComment}>
+            <form onSubmit={addComment}>
               <input onChange={(e)=>setName(e.target.value)} value={name} type="text" className='w-full p-3 rounded-xl bg-transparent border border-gray-300 text-white focus:outline-none mb-5' placeholder='Name'/>
-              <textarea onChange={(e)=>setContent(e.target.value)} value={content} name="" id=""
+              <textarea onChange={(e)=>setContent(e.target.value)} value={content} 
               placeholder="Write a comment..." 
               className="w-full p-3 rounded-xl bg-transparent border border-gray-300 text-white focus:outline-none" 
               ></textarea>
