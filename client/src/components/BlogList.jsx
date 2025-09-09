@@ -17,15 +17,15 @@ const BlogList = () => {
   }
 
   return (
-    <div className="flex flex-col gap-10">
-       <div className='px-10 pt-10 flex gap-15 items-center justify-center relative '>
+    <div className="flex flex-col gap-10 items-center ">
+       <div className='flex gap-1 sm:gap-4 items-center justify-center  rounded-full sm:w-xl md:w-3xl   '>
            {blogCategories.map((item)=>(
-            <div key={item} className='relative'>
-            <button className={`pt-2 px-2 ${menu == item && 'text-white '}`} onClick={()=>setMenu(item)}>{item}
+            <div key={item} className='relative px-3.5'>
+            <button className={` px-2 ${menu === item && 'text-blue-600'}`} onClick={()=>setMenu(item)}>{item}
             {menu === item && (
               <motion.div layoutId='underline'
                transition={{type : 'spring', stiffness: 500, damping:30}}
-               className='absolute top-0 left-0 right-0  bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg p-5 opacity-80  rounded-full'></motion.div>
+               className='absolute top-0 left-0 right-0 bottom-0  bg-gradient-to-br from-white/40 to-white/10  border border-white/50 shadow-lg  opacity-60   rounded-3xl px-8'></motion.div>
             )}
             </button>
             </div>

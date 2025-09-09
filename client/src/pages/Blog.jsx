@@ -66,18 +66,18 @@ const Blog = () => {
   return data ? (
     <>
     <Navbar></Navbar>
-   <div className="pt-20 min-h-screen flex items-center justify-center p-4 bg-cover bg-center " 
-      style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${data.image})` }}>
+   <div className="pt-30 mb-20 min-h-screen flex items-center justify-center p-4 bg-cover bg-center " 
+      style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,1)), url(${data.image})` }}>
         
       
-      <div className="max-w-4xl w-full glass bg-gradient-to-bl from-blue-500/50 to-white/10 rounded-2xl shadow-lg p-6 text-white">
+      <div className="max-w-4xl w-full glass bg-gradient-to-bl from-white/50 to-black rounded-2xl shadow-lg p-6 text-white border border-white/40 backdrop-blur-md">
         
         {/* Blog Header */}
         <div className="text-center mb-6">
           <p className="text-sm text-gray-200">Published on {Moment(data.createdAt).format('MMMM Do YYYY')}</p>
           <h1 className="text-3xl md:text-5xl font-bold mt-2">{data.title}</h1>
           <h2 className="text-lg md:text-xl text-gray-300 mt-2 italic">{data.subTitle}</h2>
-          <p className="mt-3 text-gray-200">By <span className="font-semibold">John Doe</span></p>
+          <p className="mt-3 text-gray-200">By <span className="font-semibold">Om Prakash Vishwakarma</span></p>
         </div>
 
         {/* Image */}
@@ -99,16 +99,16 @@ const Blog = () => {
           <h3 className="text-xl font-semibold mb-4">Comments ({comments.length})</h3>
 
           {/* Existing Comments */}
-          <div className="space-y-4 mb-4">
+          <div className="space-y-4 mb-4 ">
           
               {comments.map((item,index)=>(
-              <div key={index} className="p-3 glass rounded-xl">
+              <div key={index} className="p-3 glass rounded-xl relative border border-white/70">
                 <div className='flex flex-row gap-2 items-center'>
                   <img className='h-10' src={assets.user_icon} alt="" />
-                  <p>{item.name}</p>
+                  <p className='font-semibold underline'>{item.name}</p>
                 </div>
-              <p className="text-gray-100 px-15">{item.content}</p>
-              <div className='px-15'>{Moment(item.createdAt).fromNow()}</div>
+              <p className="text-gray-100 px-12">{item.content}</p>
+              <div className='px-5 absolute right-0 bottom-0 top-1 text-white/80'>{Moment(item.createdAt).fromNow()}</div>
             </div>
               ))}
             

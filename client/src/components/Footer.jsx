@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className=" relative w-full bg-gradient-to-tr from-white/60 to-white/5 backdrop-blur-lg border-t border-white/20 shadow-lg">
+    <footer className=" relative w-full bg-gradient-to-tr from-white/60 to-white/5 backdrop-blur-lg border-t border-white/20 shadow-lg ">
   <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-6">
     
     {/* <!-- Logo / Blog Name --> */}

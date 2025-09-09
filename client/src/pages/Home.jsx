@@ -6,7 +6,8 @@ import Footer from '../components/Footer'
 
 const Home = () => {
   return (
-    <div className='bg-gradient-to-b from-blue-700 to-black'>
+    <div className='relative'>
+      <img className='absolute -z-1 bottom-0 blur-xs' src="glass.jpg" alt="" />
       <Navbar></Navbar>
       <Header></Header>
       <BlogList></BlogList>
